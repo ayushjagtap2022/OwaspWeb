@@ -27,6 +27,7 @@ export function Navbar() {
   const links = [
     { to: '', label: 'home' },
     // { to: 'challenges', label: 'challenges' },
+    { to: 'rules', label: 'rules' },
     { to: 'archive', label: 'archive' },
   ];
 

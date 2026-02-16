@@ -10,7 +10,7 @@ import Register from "./pages/Register";
 import Admin from "./pages/Admin";
 import Archive from "./pages/Archive";
 import NotFound from "./pages/NotFound";
-
+import Rules from "./pages/Rules";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +26,7 @@ const App = () => (
           <Route path="/register" element={<Register />} />
           {/* <Route path="/challenges" element={<Challenges />} /> */}
           <Route path="/archive" element={<Archive />} />
+          <Route path="/rules" element={<Rules />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

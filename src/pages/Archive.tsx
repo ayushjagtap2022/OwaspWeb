@@ -35,14 +35,19 @@ const archiveData = [
   },
 ];
 
+import { GlitchText } from "@/components/GlitchText";
+
 const Archive = () => {
   return (
     <div className="min-h-screen pt-24 pb-16">
       <div className="container mx-auto px-4 max-w-4xl">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          <h1 className="font-cyber text-3xl md:text-4xl text-primary text-center mb-2 tracking-wider neon-text-red">
-            ARCHIVE
-          </h1>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
+          <GlitchText
+            text="ARCHIVE"
+            as="h1"
+            enableGlitch={false}
+            className="text-center text-4xl md:text-6xl text-primary font-bold mb-2 tracking-tight neon-text-red hover:-translate-y-1 hover:translate-x-1 transition-transform duration-200 cursor-default"
+          />
           <p className="text-center font-terminal text-muted-foreground mb-12 text-sm">
             {'>'} History of the battlefield_
           </p>

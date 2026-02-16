@@ -38,12 +38,12 @@ const Index = () => {
       <section className="min-h-[80vh] flex flex-col items-center justify-center px-4 text-center relative">
         <div className="space-y-6 max-w-3xl w-full flex flex-col items-center">
           <p className="text-terminal-green font-mono text-base md:text-lg green-glow blink-cursor">
-            {'> root@ctf:~# ./init_operation'}
+            {'> root@owasp:~# ./init_operation'}
           </p>
           <h1 className="font-mr-robot hero-title-glow hero-title-scatter text-5xl md:text-8xl lg:text-9xl text-primary tracking-wider mb-4 text-center">
             XPLOITATHON
           </h1>
-          <p className="text-muted-foreground font-mono text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="text-muted-foreground font-mono text-lg md:text-lg max-w-xl mx-auto leading-relaxed">
             A capture-the-flag competition for those who see beyond the screen.
             Crack ciphers. Reverse binaries. Uncover hidden truths.
           </p>
@@ -75,10 +75,10 @@ const Index = () => {
         <div className="max-w-4xl mx-auto space-y-8">
           <GlitchText text="// MANIFESTO" as="h2" className="text-2xl text-primary" />
           <div className="border border-border p-6 space-y-4 bg-card/50">
-            <p className="font-mono text-sm text-foreground leading-relaxed">
+            <p className="font-mono text-lg text-foreground leading-relaxed">
               <span className="text-terminal-green">$</span> This is not a game. This is a test.
             </p>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+            <p className="font-mono text-lg text-muted-foreground leading-relaxed">
               We built this CTF for operators who think differently. Every challenge is a locked door.
               Every flag is proof you belong. No hand-holding. No hints for the lazy.
               You either crack it, or you don't.
@@ -111,8 +111,15 @@ const Index = () => {
               </button>
             ))}
           </div>
-
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="w-full text-center py-12">
+            <h3 className="font-cyber text-2xl md:text-3xl text-terminal-green animate-pulse tracking-widest neon-text-green">
+              [ SYSTEM UPGRADE IN PROGRESS ]
+            </h3>
+            <p className="mt-4 font-mono text-muted-foreground blink-cursor">
+              Estimated completion: T-MINUS...
+            </p>
+          </div>
+          {/* <div className="grid md:grid-cols-2 gap-4 text-lg">
             {(activeCategory
               ? categoryStats.filter(s => s.key === activeCategory)
               : categoryStats
@@ -122,15 +129,15 @@ const Index = () => {
                   <span className="font-mono text-terminal-green text-sm">
                     /{CATEGORY_LABELS[stat.key]}
                   </span>
-                  <span className="font-mono text-xs text-muted-foreground">{stat.count} challenges</span>
+                  <span className="font-mono text-lg text-muted-foreground">{stat.count} challenges</span>
                 </div>
-                <div className="mt-2 font-mono text-xs text-muted-foreground">{stat.range}</div>
+                <div className="mt-2 font-mono text-lg text-muted-foreground">{stat.range}</div>
                 <div className="mt-3 h-1 bg-secondary rounded-full overflow-hidden">
                   <div className="h-full bg-primary/60 rounded-full" style={{ width: `${(stat.count / challenges.length) * 100}%` }} />
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {!user && (
             <p className="text-center font-mono text-xs text-muted-foreground">
